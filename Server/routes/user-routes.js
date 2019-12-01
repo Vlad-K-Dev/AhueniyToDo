@@ -4,9 +4,9 @@ const UserCtrl = require('../controllers/user-ctrl');
 
 const router = express.Router();
 
-//router.post('/registration', UserCtrl.createUser);
 
-router.post('/registration', function(req, res){
-    UserCtrl.createUser});
+router.post('/registrations', function(req, res){
+    UserCtrl.createUser(req,res);
+});
 
 module.exports = router

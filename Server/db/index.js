@@ -1,7 +1,8 @@
  const mongoose = require('mongoose');
+ require('dotenv').config();
 
  mongoose
-    .connect('mongodb://localhost:27017/multiplayer', {useNewUrlParser: true})
+    .connect(process.env.DB_CONNECTION, {useNewUrlParser: true})
     .catch(e => {
         console.log('Монгуст мозга ебет!', e.message)
     })
